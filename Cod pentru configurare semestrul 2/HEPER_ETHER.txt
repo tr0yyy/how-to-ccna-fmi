@@ -1,0 +1,18 @@
+		PENTRU TOATE ACC
+Introduceti numarul de legaturi SwACC (care se leaga de switch)
+        -astea 3 pentru fiecare legatura dintre switchuri
+	Introduceti numarul de porturi:
+	Porturi:
+	Channel:
+		PENTRU TOATE D
+Introduceti numarul de legaturi SwD (care se leaga de switch)
+        -astea 3 pentru fiecare legatura dintre switchuri
+	Introduceti numarul de porturi:
+	Porturi:
+	Channel:
+		PENTRU TOATE C
+Introduceti numarul de legaturi SwC (care se leaga de switch)
+        -astea 3 pentru fiecare legatura dintre switchuri
+	Introduceti numarul de porturi:
+	Porturi:
+	Channel:

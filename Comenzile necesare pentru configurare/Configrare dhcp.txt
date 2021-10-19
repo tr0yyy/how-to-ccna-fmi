@@ -1,0 +1,12 @@
+routere ce nu sunt direct la server:
+interfata conectata catre lan
+ip helper-address DEFAULTGATEWAY address
+
+router conectat la lan server:
+ip dhcp excluded-address 129.128.64.1 129.128.65.160(defaultgateway ipul primulului host-1)
+ip dhcp pool STANLEY1(nume lan direct)
+network 129.128.64.0 255.255.224.0 (NA lan direct)
+default-router 129.128.64.1 (defaultgateway, adresa router lan direct)
+dns-server 129.128.111.254 (adresa server)
+domain-name example.com
+exit

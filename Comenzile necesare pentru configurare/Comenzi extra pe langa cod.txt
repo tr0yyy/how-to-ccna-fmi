@@ -1,0 +1,107 @@
+PENTRU SWITCH ACC/D/C	
+______________________
+
+1.	adaugare adresa ip pe interfata vlan MAN(numarul interfetei) pe fiecare switch in parte
+2.	adaugare default gateway address pe fiecare switch in parte (default gateway router vlan MAN)
+(ip default-gateway "gateway")
+______________________
+PENTRU ROUTER DE PE VLANURI+NORMALE
+1.adaugare rutare pentru vlanuri
+interface g0/1.10(numarul vlanului)
+description Legatura cu VLAN10
+encapsulation dot1q 10(numarul vlanului)
+ip address 132.172.112.1 255.255.248.0 -> adresa router ului pe vlan
+exit
+interface g0/1.20
+description Legatura cu VLAN20
+encapsulation dot1q 20
+ip address 132.172.64.1 255.255.224.0
+exit
+interface g0/1.30
+description Legatura cu VLAN30
+encapsulation dot1q 30
+ip address 132.172.120.1 255.255.252.0
+exit
+interface g0/1
+no shutdown
+
+2.adaugare comenzi dhcp
+routere ce nu sunt direct la server:
+pe interfata conectata catre lan/vlan!
+ip helper-address DEFAULTGATEWAY address(Server)
+
+router conectat la lan server:
+(in terminal)
+ip dhcp excluded-address 129.128.64.1 129.128.65.160(defaultgateway ipul, ip-ul primului host-1)
+ip dhcp pool STANLEY1(nume lan)
+network 129.128.64.0 255.255.224.0 (NA lan)
+default-router 129.128.64.1 (defaultgateway, adresa router lan/vlan)
+dns-server 129.128.111.254 (adresa server)
+domain-name example.com
+
+3.rutare cu celelalte lanuri eigrp/rip/ospf
+	->EIGRP
+router eigrp 1
+no auto-summary
+network NA IP + wildcard_mask(se trec toate ipurile ce intra in router si wildcardul este 255.255.255.255-masca pe care o avem)
+passive -interface X (X=toate porturile NEFOLOSITE)
+
+	->RIP
+router rip
+version 2
+network NA IP(se trec toate ipurile ce intra in router)
+no auto-summary
+
+	->OSPF
+router ospf 1
+network N.A. + wilcard_mask area 0 (NA si wildcard la fel cca EIGRP)
+passive -interface X(X=toate porturile NEFOLOSITE)
+
+______________________
+PENTRU WIFI
+1.SETUP:
+-static-ip (completezi valori):
+	->ip adress-primul ip DUPA gateway
+	->masca e clasica
+	->gateway e cealalt ip (pus in router)
+	->DNS 1 este adresa SERVERULUI (vezi daca ai sever in alt LAN)
+-network setup (schimbi):
+	->ip address: 192.168.253.161
+	->subnet mask: 255.255.255.224
+	->start ip address: 192.168.0.161
+	->maximum number of users: 30
+-dai save de jos
+WIRELESS:
+-basic wireless settings:
+	->network name(SSID) este numele aparatului gionule
+	->standard channel – alegi canalul 6 sau 11
+	-dai save de jos
+-wireless security:
+	->security mode: WPA2 Enterprise
+	->RADIUS Server:  ip server aici
+	->shared secret: RadiusPa55
+	-dai save de jos
+-wireless MAC Filter:
+	->enabled
+	->VEZI LA CERINTE CE BLOCHEZI/PERMITI (ipconfig /all in laptopuri si te uiti la WIRELESS CONNECTION LA PHYSICAL ADDRESS) 
+-dai save de jos
+SERVER:
+-AAA:
+	->Network Config:
+	->Client Name:Network Name(SSID) din WiFI
+	->Client IP: IP WIFI
+	->Shared Secret: RadiusPA55
+	
+	->User Setup
+	->Creezi user pt laptop
+____________________________________________________________________________________________
+TESTE
+ping ip address unde dai ping
+ssh
+	->ssh -l Admin01 172.32.16.2 //username si ip dizpozitiv
+ftp 
+	->ftp adresa server
+	->logare pe credentials din server
+	->get file(file=numele fisierului din server)
+
+

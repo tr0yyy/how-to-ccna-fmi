@@ -1,0 +1,15 @@
+		PENTRU TOATE VLANURILE (inclusiv cel null)
+Introduceti numele VLAN-ului (toate CAPS):
+Introduceti valoarea VLAN-ului:
+Cate adrese mac poate sa retina maxim:
+	DACA ESTE NULL TE OPRESTI
+Este administrativ (da sau nu):
+Introduceti numarul de porturi VLAN-ului:
+                        LEGENDA
+                        fa 0/1->1
+                        fa 0/2->2
+                        ---------
+                        fa 0/24->24
+                        giga 0/1->25
+                        giga 0/2->26
+Introduceti porturile VLAN-ului:

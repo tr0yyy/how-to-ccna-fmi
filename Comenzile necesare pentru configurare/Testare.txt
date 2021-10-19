@@ -1,0 +1,24 @@
+Packet Tracer PC Command Line 1.0
+C:\>
+ping 172.32.16.2 //(ip alocat switchului-sau ce dizpotivi e legat)
+//preferabil de 2 ori
+
+C:\>ssh -l Admin01 172.32.16.2 //username si ping dizpozitiv
+
+Password: //parola creata la user
+
+Acesta este terminalul!
+
+Sw1COPENHAGA#exit
+
+[Connection to 172.32.16.2 closed by foreign host]
+C:\>
+//se iese de fiecare data dupa utilizare cu exit
+
+ftp adresa server
+logare pe credentials din server
+get file(din server)
+
+
+
+

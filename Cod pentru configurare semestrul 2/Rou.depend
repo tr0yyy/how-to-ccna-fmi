@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1608486196 source:c:\users\gabyl\onedrive\desktop\facultate\anul 2\sem 1\fundamente ale retelelor de calculatoare\rou\swi\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+
+1609260395 source:c:\users\gabyl\onedrive\desktop\facultate\anul 2\sem 1\fundamente ale retelelor de calculatoare\coduri\cod_sr\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+	<string>
+
+1615939722 source:c:\users\40727\desktop\facultate\anul 2\sem 2\fundamente ale rutarii in retea\coduri\cod_sr\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+	<string>
+
+1616581113 source:c:\users\40727\desktop\facultate\anul 2\sem 2\fundamente ale rutarii in retea\coduri\cod_swro\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<stdlib.h>
+	<string>
+
+1617712001 source:c:\users\gabyl\onedrive\desktop\facultate\anul 2\sem 2\fundamente ale rutarii in retea\coduri\cod_swro\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<stdlib.h>
+	<string>
+
+1617683554 source:c:\users\crisi\onedrive\desktop\cod_swro\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<stdlib.h>
+	<string>
+
+1621276730 source:e:\facultate\anul 2\sem 2\retele\cod_swro\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<stdlib.h>
+	<string>
+

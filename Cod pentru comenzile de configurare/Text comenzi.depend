@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1616511662 source:c:\users\crisi\onedrive\desktop\text comenzi\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+	<string>
+
